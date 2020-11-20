@@ -12,7 +12,8 @@
     "flow": "flow",
     "lint": "eslint --fix",
     "lint-check": "eslint .",
-    "precommit": "flow && lint-staged"
+    "precommit": "flow && lint-staged",
+    "postinstall": "husky install"
   },
   "lint-staged": {
     "*.js": "eslint --cache --fix"
