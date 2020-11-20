@@ -32,7 +32,7 @@ module.exports = merge(common, {
               importLoaders: 2,
               modules: {
                 mode: 'local',
-                localIdentName: '[path][name]__[local]--[hash:base64:5]',
+                localIdentName: '[local]',
                 localIdentContext: path.resolve(__dirname, 'src'),
               },
               sourceMap: true,
