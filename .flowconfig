@@ -11,5 +11,8 @@
 types_first=false
 well_formed_exports=false
 suppress_type=$FlowFixMe
+module.file_ext=.js
+module.file_ext=.scss
+module.file_ext=.css
 
 [strict]

@@ -1,5 +1,6 @@
 const path = require('path');
 const fs = require('fs');
+const StylelintPlugin = require('stylelint-webpack-plugin');
 
 const rootDir = path.resolve(__dirname);
 const appSrc = fs.realpathSync(path.join(rootDir, 'src'));
@@ -23,4 +24,5 @@ module.exports = {
     publicPath: '/dist/',
     filename: 'bundle.js',
   },
+  plugins: [new StylelintPlugin()],
 };

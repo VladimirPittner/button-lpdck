@@ -1,0 +1,88 @@
+$colorVariants: (
+  Red: #ff6b6b,
+  Pink: #f06595,
+  Grape: #cc5de8,
+  Violet: #845ef7,
+  Indigo: #5c7cfa,
+  Blue: #339af0,
+  Cyan: #22b8cf,
+  Teal: #20c997,
+  Green: #51cf66,
+  Lime: #94d82d,
+  Yellow: #fcc419,
+  Orange: #ff922b,
+);
+
+@mixin generateColorVariants() {
+  @each $key, $value in $colorVariants {
+    .Button#{$key} {
+      border-color: $value;
+
+      &:hover {
+        background-color: $value;
+      }
+
+      &:disabled {
+        background-color: transparent;
+      }
+    }
+  }
+}
+
+.ButtonBase {
+  background-color: transparent;
+  background-image: none;
+  border: 1px solid #a65bec;
+  border-radius: 4px;
+  box-shadow: none;
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: normal;
+  height: 40px;
+  margin: 0;
+  padding: 0 20px;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 150ms ease 0ms, color 150ms ease 0ms, border-color 150ms ease 0ms;
+  user-select: none;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: transparent;
+    background-image: none;
+  }
+
+  &:hover {
+    background-color: #a65bec;
+  }
+
+  &:disabled {
+    background-color: transparent !important;
+    border-color: #777 !important;
+    color: #777 !important;
+    cursor: not-allowed;
+  }
+}
+
+@include generateColorVariants();
+
+.ButtonSmall {
+  height: 30px;
+  padding: 0 15px;
+}
+
+.ButtonMedium {
+  height: 40px;
+  padding: 0 20px;
+}
+
+.ButtonLarge {
+  height: 60px;
+  padding: 0 35px;
+}
+
+.ButtonBaseCount {
+  margin-left: 5px;
+}

@@ -1,5 +1,18 @@
 .App {
+  background-color: #222;
+  color: rgba(255, 255, 255, 0.9);
   height: 100%;
   padding: 30px;
-  background-color: #222;
+}
+
+.Showcase {
+  display: flex;
+  flex-flow: wrap;
+  margin: -30px;
+  padding: 0 15px;
+}
+
+.ShowcaseBox {
+  flex: 1 0 auto;
+  margin: 30px;
 }
